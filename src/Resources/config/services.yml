@@ -1,0 +1,12 @@
+services:
+  BrauneDigital\PhpToTypescriptConverterBundle\Command\GenerateTypescriptModelsCommand:
+    arguments:
+      $projectDir: '%kernel.project_dir%'
+      $directoryClassMetaDataReader: '@BrauneDigital\PhpToTypescriptConverterBundle\MetaData\DirectoryClassMetaDataReader'
+      $declarationFactory: '@BrauneDigital\PhpToTypescriptConverterBundle\MetaData\TypescriptInterfaceDeclarationFactory'
+    tags:
+      - { name: console.command }
+
+  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\:
+    resource: '../../MetaData/*'
+    autowire: true
