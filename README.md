@@ -63,3 +63,9 @@ interface ModelClass {
 ### Requirements
 * Only public properies will be extracted.
 * The usage of other classes is only possible, if they are within the Namespace of **SOURCE_DIR**.
+
+Development
+-----------
+The development of this Symfony-Bundle adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+All changes are documented in the [CHANGELOG](CHANGELOG.md).
