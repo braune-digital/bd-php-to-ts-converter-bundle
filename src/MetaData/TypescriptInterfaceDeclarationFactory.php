@@ -163,16 +163,20 @@ class TypescriptInterfaceDeclarationFactory
 
         // If First letter is upercase, we have a class-name
         if (preg_match('~^\p{Lu}~u', $phpType)) {
+            $basePHPType = '[]' === substr($phpType, -2)
+                ? substr($phpType, 0, -2)
+                : $phpType;
+
             $relatedImport = array_filter(
                 $imports,
-                fn(TypescriptImport $import) => $phpType === $import->name()
+                fn(TypescriptImport $import) => $basePHPType === $import->name()
             );
 
             if (0 === count($relatedImport))
             {
-                $tsPath = $this->convertPathAndNameToTsImportPath('.', $phpType);
+                $tsPath = $this->convertPathAndNameToTsImportPath('.', $basePHPType);
                 array_push($imports, new TypescriptImport(
-                    $phpType,
+                    $basePHPType,
                     $tsPath
                 ));
             }
