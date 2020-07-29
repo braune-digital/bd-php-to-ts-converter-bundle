@@ -7,6 +7,16 @@ services:
     tags:
       - { name: console.command }
 
-  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\:
-    resource: '../../MetaData/*'
+
+  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\ClassMetaDataReader:
     autowire: true
+
+  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\DirectoryClassMetaDataReader:
+    autowire: true
+
+  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\DocBlockReader:
+    autowire: true
+
+  BrauneDigital\PhpToTypescriptConverterBundle\MetaData\TypescriptInterfaceDeclarationFactory:
+    autowire: true
+
