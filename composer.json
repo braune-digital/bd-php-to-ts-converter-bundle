@@ -1,7 +1,7 @@
 {
-  "name": "braune-digital/php-to-typescript-converter",
+  "name": "braune-digital/bd-php-to-ts-converter-bundle",
   "type": "bundle",
-  "description": "A tool to automatically generate Typescript Interfaces from PHP Classes",
+  "description": "Symfony Bundle generate Typescript Interfaces from PHP Classes",
   "license": "MIT",
   "authors": [
     {

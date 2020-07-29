@@ -8,7 +8,7 @@ Installation
 
 It is installed into a Symfony-Project via composer:
 ```bash
-$ composer require --dev braune-digital/php-to-typescript-converter
+$ composer require --dev braune-digital/bd-php-to-ts-converter-bundle
 ```
 
 
